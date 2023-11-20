@@ -21,10 +21,9 @@ firebase = pyrebase.initialize_app(config)
 
 db = firebase.database()
 
-@app.route('/hello')
+@app.route('/')
 def hello():
-    return 'Hello, World!'
-
+    return 'Hello, World!' 
 
 
 
