@@ -26,7 +26,7 @@ firebase = pyrebase.initialize_app(config)
 
 db = firebase.database()
 
-os.environ["OPENAI_API_KEY"] = "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"
+os.environ["OPENAI_API_KEY"] = "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"
 
 directory = 'bison_adv/ChatAI/docs'
 
