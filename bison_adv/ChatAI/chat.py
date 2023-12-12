@@ -47,7 +47,7 @@ def split_docs(documents,chunk_size=1000,chunk_overlap=20):
 docs = split_docs(documents)
 print(len(docs))
 
-query = "How many credits is CHEM 003?"
+
 
 embeddings = OpenAIEmbeddings()
 
@@ -79,5 +79,5 @@ def get_answer(query):
   answer =  chain.run(input_documents=similar_docs, question=query)
   return answer
 
-print(get_answer(query))
+
 

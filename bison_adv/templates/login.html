@@ -1,0 +1,88 @@
+<html>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.3/dist/Chart.min.js"></script>
+  <link>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: contain;
+      background-image: url('../static/Howard_Bison_logo.jpg');
+      background-color: rgba(255,255,255,0.6);
+      background-blend-mode: lighten;
+    }
+    .login-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+    .login-form {
+      max-width: 400px;
+      padding: 20px;
+      border-radius: 10px;
+      background-color: #fff;
+      box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
+    }
+    .login-form h2 {
+      text-align: center;
+      margin-bottom: 20px;
+      color: #003A63;
+      text-transform: uppercase;
+      letter-spacing: 3px;
+    }
+    .login-form input[type="text"],
+    .login-form input[type="password"] {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 20px;
+      border: none;
+      border-radius: 5px;
+      box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2);
+    }
+    .login-form input[type="submit"] {
+      display: block;
+      width: 100%;
+      padding: 10px;
+      border: none;
+      border-radius: 5px;
+      background-color: #003A63;
+      color: #fff;
+      font-size: 18px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+    .login-form input[type="submit"]:hover {
+      background-color: #003A63;
+    }
+    .login-form p {
+      text-align: center;
+      margin-top: 20px;
+    }
+    .login-form a {
+      color: #003A63;
+      text-decoration: none;
+      transition: color 0.3s ease;
+    }
+    .login-form a:hover {
+      color: #003A63;
+    }
+  </style>
+  <head> 
+    <title>Login</title>
+  </head>
+  <body>
+    <div class="login-container">
+      <form action='/' class= "login-form" method="POST">
+        <h2>Login</h2>
+        <input type="text" name="email" placeholder="Username" required />
+        <input type="password" name="password" placeholder="Password" required />
+        <input type="submit" value="Sign In" />
+      </form>
+    </div>
+  </body>
+</html>

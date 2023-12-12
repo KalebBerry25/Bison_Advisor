@@ -1,0 +1,59 @@
+<html>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.3/dist/Chart.min.js"></script>
+
+  <link>
+  <style>
+    body  {
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: contain;
+      background-image: url('../static/Howard_Bison_logo.jpg');
+      background-color: rgba(255,255,255,0.6);
+      background-blend-mode: lighten;
+    }
+  </style>
+  <head> 
+    <title>Acedmic Records</title>
+  </head>
+  <body>
+    <div style="position: fixed; top: 0px; left: 0px; bottom: 0px; width: 275px; padding: 2rem 1rem; background-color: #003A63;">
+      <h2 class="display-4 inter-font" style="text-align: center; font-weight: bold; font-family: Inter; color: white;">Bison Advisor</h2>
+      <hr>
+      <div class="flex-column nav nav-pills">
+        <a href="/" class="nav-link" style="font-family: Inter; color: white;">Home</a>
+        <a href="/page-2" class="nav-link" style="font-family: Inter; color: white;">Registration</a>
+        <a href="/records" class="nav-link active" style="font-family: Inter; color: white;">Academic Records</a>
+        <a href="/page-4" class="nav-link" style="font-family: Inter; color: white;">Advising</a>
+        <a href="/page-5" class="nav-link" style="font-family: Inter; color: white;">Messaging</a>
+        <a href="/page-6" class="nav-link" style="font-family: Inter; color: white;">Search Courses</a>
+        <hr>
+        <a href="/logout" class="nav-link" style="font-family: Inter; color: white;">Logout</a>
+      </div>
+    </div>
+
+    <div>
+      <div class="container" style="position: fixed; top: 300px; left:600px;  width: 250px; align-items:center;">
+        <p style= "font-family: Arial, Helvetica, sans-serif; font-weight: bold; font-size: large;">Upload Acedmic Records</p>
+        <img src="../static/document1.jpg" style="display: block;margin-left: auto;margin-right: auto;width: 50%;">
+        <form name ="upload" method = "POST" enctype="multipart/form-data">
+          <input type = "file" name = "upload"/>
+          <input type = "submit" name = "upload"/>
+        </form>
+      </div>
+    </div>
+
+    <div class="container">
+      <div style="position: fixed; bottom: 30px; left:50%;  width: 800px; min-height: 50pxt: 100px; -webkit-transform: translateX(-50%);transform: translateX(-50%);" >
+        <form  name = "query" method = "POST" style="border-radius: 10px; background-color: #fff; box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3); width: 800px; min-height: 50px;">
+          <input type="text" name="query" placeholder="Ask an Advising Question" style="width: 800px; min-height: 50px;"/>
+        </form>
+        <hr>
+        <form method = "GET" style="border-radius: 10px; background-color: #fff; box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3); width: 800px; min-height: 50px;">
+          <p type="text" name="response" placeholder="Ask an Advising Question" style="width: 800px; min-height: 100px;">{{answer}}<p>
+        </form>
+      </div>
+    </div>
+  </body>
+</html>
