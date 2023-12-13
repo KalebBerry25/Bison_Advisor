@@ -3,7 +3,12 @@
         integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.3/dist/Chart.min.js"></script>
 
-  <link>
+  <link rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
+  <link
+  href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap"
+  rel="stylesheet"/>
+  <link rel="stylesheet" href="../static/styles.css" />
   <style>
     body  {
       background-repeat: no-repeat;
@@ -15,7 +20,7 @@
     }
   </style>
   <head> 
-    <title>Acedmic Records</title>
+    <title>Home</title>
   </head>
   <body>
     <div style="position: fixed; top: 0px; left: 0px; bottom: 0px; width: 275px; padding: 2rem 1rem; background-color: #003A63;">
@@ -24,25 +29,16 @@
       <div class="flex-column nav nav-pills">
         <a href="/" class="nav-link" style="font-family: Inter; color: white;">Home</a>
         <a href="/register" class="nav-link" style="font-family: Inter; color: white;">Registration</a>
-        <a href="/records" class="nav-link active" style="font-family: Inter; color: white;">Academic Records</a>
+        <a href="/records" class="nav-link" style="font-family: Inter; color: white;">Academic Records</a>
         <a href="/advising" class="nav-link" style="font-family: Inter; color: white;">Advising</a>
-        <a href="/messaging" class="nav-link" style="font-family: Inter; color: white;">Messaging</a>
+        <a href="/messaging" class="nav-link active" style="font-family: Inter; color: white;">Messaging</a>
         <a href="/search" class="nav-link" style="font-family: Inter; color: white;">Search Courses</a>
         <hr>
         <a href="/logout" class="nav-link" style="font-family: Inter; color: white;">Logout</a>
       </div>
     </div>
 
-    <div>
-      <div class="container" style="position: fixed; top: 300px; left:600px;  width: 250px; align-items:center;">
-        <p style= "font-family: Arial, Helvetica, sans-serif; font-weight: bold; font-size: large;">Upload Acedmic Records</p>
-        <img src="../static/document1.jpg" style="display: block;margin-left: auto;margin-right: auto;width: 50%;">
-        <form name ="upload" method = "POST" enctype="multipart/form-data">
-          <input type = "file" name = "upload"/>
-          <input type = "submit" name = "submit"/>
-        </form>
-      </div>
-    </div>
+  
 
     <div class="container">
       <div style="position: fixed; bottom: 30px; left:50%;  width: 800px; min-height: 50pxt: 100px; -webkit-transform: translateX(-50%);transform: translateX(-50%);" >

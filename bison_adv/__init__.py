@@ -1,10 +1,10 @@
 import os
-
 import pyrebase
 from flask import *
 from ChatAI import chat
 import tempfile
 import time
+
 
 
 
@@ -63,6 +63,42 @@ def query():
     return render_template('home.html', answer=answer)
   return render_template('home.html')
 
+@app.route('/advising', methods=["GET","POST"])
+def advising():
+  print(request.form)
+  if request.method == "POST" and "query" in request.form:
+    query = request.form["query"]
+    answer = chat.get_answer(query)
+    return render_template('advising.html', answer=answer)
+  return render_template('advising.html')
+
+@app.route('/messaging', methods=["GET","POST"])
+def messaging():
+  print(request.form)
+  if request.method == "POST" and "query" in request.form:
+    query = request.form["query"]
+    answer = chat.get_answer(query)
+    return render_template('messaging.html', answer=answer)
+  return render_template('messaging.html')
+
+@app.route('/register', methods=["GET","POST"])
+def register():
+  print(request.form)
+  if request.method == "POST" and "query" in request.form:
+    query = request.form["query"]
+    answer = chat.get_answer(query)
+    return render_template('register.html', answer=answer)
+  return render_template('register.html')
+
+@app.route('/search', methods=["GET","POST"])
+def search():
+  print(request.form)
+  if request.method == "POST" and "query" in request.form:
+    query = request.form["query"]
+    answer = chat.get_answer(query)
+    return render_template('search.html', answer=answer)
+  return render_template('search.html')
+
 @app.route('/records', methods=["GET","POST"])
 def upload():
   print(request.files)
@@ -70,7 +106,7 @@ def upload():
     query = request.form["query"]
     answer = chat.get_answer(query)
     return render_template('records.html',answer=answer)
-  if request.method == "POST" and "upload" in request.form:
+  if request.method == "POST" and "upload" in request.files:
     print(request.form)
     file = request.files['upload']
     temp = tempfile.NamedTemporaryFile(delete=False)
